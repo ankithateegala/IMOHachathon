@@ -26,3 +26,4 @@ C:\Users\ateegala\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\bin\
 C:\Users\ateegala\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\obj\Debug\Confluence.API.csprojResolveAssemblyReference.cache
 C:\Users\ateegala\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\ateegala\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\obj\Debug\Confluence.API.csprojResolveAssemblyReference.cache

@@ -1,1 +1,1 @@
-# IMOHachathon
+# IMOHackathon

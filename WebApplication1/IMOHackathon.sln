@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confluence.API", "WebApplication1\Confluence.API.csproj", "{BCBCA0F8-9563-4404-B56A-0D5A8B6ADDB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confluence.Model", "Confluence.Model\Confluence.Model.csproj", "{8813D4B8-ED28-4912-AC25-E0E5DBFCD372}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BCBCA0F8-9563-4404-B56A-0D5A8B6ADDB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCBCA0F8-9563-4404-B56A-0D5A8B6ADDB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCBCA0F8-9563-4404-B56A-0D5A8B6ADDB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8813D4B8-ED28-4912-AC25-E0E5DBFCD372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8813D4B8-ED28-4912-AC25-E0E5DBFCD372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8813D4B8-ED28-4912-AC25-E0E5DBFCD372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8813D4B8-ED28-4912-AC25-E0E5DBFCD372}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,9 @@
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\Confluence.Model\bin\Debug\Confluence.Model.dll
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\Confluence.Model\bin\Debug\Confluence.Model.pdb
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\Confluence.Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\Confluence.Model\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\Confluence.Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\Confluence.Model\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\Confluence.Model\obj\Debug\Confluence.Model.csprojResolveAssemblyReference.cache
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\Confluence.Model\obj\Debug\Confluence.Model.dll
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\Confluence.Model\obj\Debug\Confluence.Model.pdb

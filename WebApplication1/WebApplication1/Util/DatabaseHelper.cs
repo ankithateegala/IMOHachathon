@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Confluence.Model;
 using WebApplication1.Interface;
 
 namespace WebApplication1.Util
@@ -18,6 +21,12 @@ namespace WebApplication1.Util
             _dapper = factory.Dapper;
             _fileReader = factory.Files;
             _configuration = factory.WebConfig;
+        }
+
+        public IEnumerable<AcronymsInfo> GetAcronymsInfo()
+        {
+            var response = _dapper.Query<AcronymsInfo>(_configuration.RdssqlServerConnection, _fileReader.GetFile(_configuration.GetAcronyms));
+            return response;
         }
     }
 }

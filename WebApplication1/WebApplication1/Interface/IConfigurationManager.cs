@@ -4,5 +4,6 @@
     {
         string RdssqlServerConnection { get; }
         string SqlQueryPath { get; }
+        string GetAcronyms { get; }
     }
 }

@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Sql\GetAcronyms.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -119,7 +120,6 @@
   <ItemGroup>
     <Folder Include="App\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Sql\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Confluence.Model\Confluence.Model.csproj">

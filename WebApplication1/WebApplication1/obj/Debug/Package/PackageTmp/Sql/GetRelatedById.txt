@@ -1,0 +1,17 @@
+﻿select ISNULL(child.acronym, child.FULL_NAME)
+from ABSTRACT abstract
+left join PARENTALS
+  on abstract.ABSTRACT_CODE = PARENTALS.PARENT_CODE
+left join abstract child
+  on child.ABSTRACT_CODE = PARENTALS.CHILD_CODE
+where ISNULL(child.acronym, child.FULL_NAME) is not null
+   and abstract.ABSTRACT_CODE = @ABSTRACT_CODE
+UNION
+select ISNULL(parent.acronym, parent.FULL_NAME) related
+from ABSTRACT abstract
+left join PARENTALS
+  on abstract.ABSTRACT_CODE = PARENTALS.CHILD_CODE
+left join abstract parent
+  on parent.ABSTRACT_CODE = PARENTALS.PARENT_CODE
+where ISNULL(parent.acronym, parent.FULL_NAME) is not null
+  and abstract.ABSTRACT_CODE = @ABSTRACT_CODE

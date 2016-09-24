@@ -4,14 +4,15 @@
     <title>What's IT</title>
     <meta charset="utf-8" />
     <script src="Scripts/angular.min.js"></script>
-    <script type="text/javascript" src="app/main.js"></script>
-    <script src="Scripts/angular.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/main.js"></script>
+    <script src="path/to/angular.js"></script>
+    <script src="path/to/angular-route.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js"></script>
-
     <style>
         .navbar-default {
             background-color: #2e6da4;
@@ -24,12 +25,20 @@
             .navbar-default .navbar-nav > li > a {
                 color: white;
             }
-    </style>
+                    .stylish-panel {
+            padding: 20px 0;
+        }
 
+            .stylish-panel > div > div {
+                padding: 10px;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                transition: 0.2s;
+            }
+    </style>
 </head>
 <body>
     <div ng-controller="whatsItController">
-
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -47,21 +56,34 @@
                 </div>
             </div>
         </nav>
-        <hr />
         <br>
-
-        <table class="table table-striped" id="searchTextResults">
-            <tr>
-               <input placeholder="Search" ng-model="query" class="form-control ng-pristine ng-valid" layout="column"/>
-            </tr>    
-            <tr ng-repeat="row in rowCollection | filter:query">
-                <td>
-                    <h1>{{row.Acronym}}</h1>
-                    <h2>{{row.Full_Name}}</h2>
-                    <p>{{row.Description}}</p>
-                </td>
-            </tr>
-        </table>
+        <br>
+        <br>
+        <br>
+        <div>
+            <table class="table table-striped" id="searchTextResults">
+                <tr>
+                    <th  class="col-md-3">
+                    </th>
+                    <th class="col-md-8">
+                        Search: <input ng-model="searchText">
+                    </th>
+                    <th class="col-md-3">
+                    </th>
+                </tr>
+                <tr ng-repeat="row in rowCollection | filter:searchText">
+                    <td class="col-md-3"></td>
+                    <td class="col-md-8">
+                        <h2>{{row.Acronym}}</h2>
+                        <h2>{{row.Full_Name}}</h2>
+                        <p>{{row.Description}}</p>
+                    </td>
+                    <td class="col-md-3">
+                        <h5>Useful Links</h5>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>

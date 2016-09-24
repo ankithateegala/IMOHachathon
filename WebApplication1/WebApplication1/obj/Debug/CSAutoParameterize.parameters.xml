@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="RDSSQLServerConnection-Web.config Connection String" description="RDSSQLServerConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=sql-junyu.c4raiosyccmv.us-west-2.rds.amazonaws.com;Initial Catalog=Acronyms;User Id=admin;Password=password;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\jwang\\Source\\Repos\\IMOHackathon\\WebApplication1\\WebApplication1\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RDSSQLServerConnection']/@connectionString" />
+  </parameter>
+</parameters>

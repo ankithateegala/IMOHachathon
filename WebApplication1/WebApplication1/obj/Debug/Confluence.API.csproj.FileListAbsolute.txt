@@ -72,3 +72,6 @@ C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\obj\Deb
 C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
 C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\bin\Dapper.dll
 C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\bin\Dapper.xml
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\bin\System.Web.Cors.dll
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\bin\System.Web.Http.Cors.dll
+C:\Users\jwang\Source\Repos\IMOHackathon\WebApplication1\WebApplication1\bin\System.Web.Http.Cors.xml

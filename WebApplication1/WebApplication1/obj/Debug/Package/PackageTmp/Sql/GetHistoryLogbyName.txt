@@ -1,0 +1,4 @@
+SELECT [ACRONYMName]
+      ,[AppearTimes]
+  FROM [Acronyms].[dbo].[HistoryLog]
+  WHERE [ACRONYMName] = @ACRONYMName

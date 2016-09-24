@@ -31,6 +31,19 @@
         });
     }])
 
+    myApp.controller('LogController', ['$scope', 'whatsItFactory', function ($scope, whatsItFactory) {
+        var url = 'http://imohackathon-1.xrzyyed2vm.us-west-2.elasticbeanstalk.com/api/Log';
+        whatsItFactory.get(url).success(function (data) {
+            
+            $scope.rowCollection = data;
+            $scope.columnColletion = [
+                { label: 'Acronym Name', map: 'AcronymName' },
+                { label: 'Request Times', map: 'AppearTimes' }
+            ];
+        }).error(function (error) {
+            // log errors
+        });
+    }])
 
     //var thumbsUp = element(by.css('span.glyphicon-thumbs-up'));
     //var thumbsDown = element(by.css('span.glyphicon-thumbs-down'));

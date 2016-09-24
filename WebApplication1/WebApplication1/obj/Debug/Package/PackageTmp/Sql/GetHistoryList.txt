@@ -1,0 +1,3 @@
+﻿SELECT [ACRONYMName]
+      ,[AppearTimes]
+  FROM [Acronyms].[dbo].[HistoryLog]

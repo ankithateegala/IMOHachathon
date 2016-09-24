@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Confluence.Model;
 using WebApplication1.Interface;
 using WebApplication1.Util;
@@ -9,6 +10,7 @@ using WebApplication1.Util;
 namespace WebApplication1.Controllers
 {
     [RoutePrefix("Api/Log")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class LogController : ApiController
     {
         private readonly DatabaseHelper _databaseHelper;

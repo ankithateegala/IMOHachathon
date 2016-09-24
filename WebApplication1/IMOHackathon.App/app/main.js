@@ -25,6 +25,7 @@
             whatsItFactory.get(url)
                 .success(function(data) {
                     $scope.rowCollection = data;
+                    $scope.query = '';
                     Object.keys(data).forEach(function (key) {
                         //get the value of name
                         var val = data[key]["Acronym"];
@@ -40,6 +41,7 @@
                     // log errors
                 });
         }
+
     ]);
 
 

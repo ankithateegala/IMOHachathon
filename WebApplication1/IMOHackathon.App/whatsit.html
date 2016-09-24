@@ -49,9 +49,12 @@
         </nav>
         <hr />
         <br>
-        <label>Search: <input ng-model="searchText"></label>
+
         <table class="table table-striped" id="searchTextResults">
-            <tr ng-repeat="row in rowCollection | filter:searchText">
+            <tr>
+               <input placeholder="Search" ng-model="query" class="form-control ng-pristine ng-valid" layout="column"/>
+            </tr>    
+            <tr ng-repeat="row in rowCollection | filter:query">
                 <td>
                     <h1>{{row.Acronym}}</h1>
                     <h2>{{row.Full_Name}}</h2>

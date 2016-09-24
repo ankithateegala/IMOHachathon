@@ -59,6 +59,35 @@
         {
             color: white;
         }
+        .animate-show {
+          line-height: 20px;
+          opacity: 1;
+          padding: 10px;
+          border: 1px solid black;
+          background: white;
+        }
+
+        .animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+          transition: all linear 0.5s;
+        }
+
+        .animate-show.ng-hide {
+          line-height: 0;
+          opacity: 0;
+          padding: 0 10px;
+        }
+
+        .check-element {
+          padding: 10px;
+          border: 1px solid black;
+          background: white;
+        }
+
+        #myNavbar {
+            position:fixed;
+            _position:absolute;
+            _top:expression(documentElement.scrollTop + "px");
+        }
     </style>
 
 </head>
@@ -76,19 +105,10 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Page 1-1</a></li>
-                            <li><a href="#">Page 1-2</a></li>
-                            <li><a href="#">Page 1-3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+                    <li><a href="#">ProblemIT</a></li>
+                    <li><a href="#">SurgIT</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
@@ -97,65 +117,75 @@
     
     <div class=" container">
         <div class="page-header">
+            
         </div>
+        <button type="button" style="float: right"><span class="glyphicon glyphicon-pencil"></span></button>
+        <div style="float: right">
+            What's IT: <input type="checkbox" ng-model="whatsit" aria-label="Toggle ngHide"><br />
+            Time Consultant: <input type="checkbox" ng-model="TimeConsultant" aria-label="Toggle ngHide"><br />
+            Trinet: <input type="checkbox" ng-model="Trinet" aria-label="Toggle ngHide"><br />
+            Cornerstone: <input type="checkbox" ng-model="Cornerstone" aria-label="Toggle ngHide"><br />
+            Blank1: <input type="checkbox" ng-model="Blank1" aria-label="Toggle ngHide"><br />
+            Blank2: <input type="checkbox" ng-model="Blank2" aria-label="Toggle ngHide"><br />
+        </div>
+            <div class="container">
+                <div class="row stylish-panel">
+                    <div ng-show="whatsit">
+                        <div class="col-md-4">
+                            <a href="/whatsit.html" class="btn btn-primary">
+                                <img src="/Images/What'sIT.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>Acronymn finder</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div ng-show="TimeConsultant">
+                        <div class="col-md-4">
 
-        <div class="container">
-            <div class="row stylish-panel">
-                <div class="col-md-4">
-                    <div>
-                        <a href="/whatsit.html" class="btn btn-primary">
-                            <img src="/Images/What'sIT.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                            <p>Acronymn finder</p>
-                        </a>
+                            <a href="#" class="btn btn-primary">
+                                <img src="/Images/timeconsultant.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>Do timesheets every week!</p>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <a href="#" class="btn btn-primary">
-                            <img src="/Images/timeconsultant.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                            <p>Do timesheets every week!</p>
-                        </a>
+                    <div ng-show="Trinet">
+                        <div class="col-md-4">
+                            <a href="#" class="btn btn-primary">
+                                <img src="/Images/Trinet.jpg" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>Manage your profile</p>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <a href="#" class="btn btn-primary">
-                            <img src="/Images/Trinet.jpg" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                            <p>Manage your profile</p>
-                        </a>
+                    <div ng-show="Cornerstone">
+                        <div class="col-md-4">
+                            <a href="#" class="btn btn-primary">
+                                <img src="/Images/cornerstone.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>Know your potential</p>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <a href="#" class="btn btn-primary">
-                            <img src="/Images/cornerstone.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                            <p>Know your potential</p>
-                        </a>
+                    <div ng-show="Blank1">
+                        <div class="col-md-4">
+                            <a href="#" class="btn btn-primary">
+                                <img src="/Images/blanklogo.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>
+                                    Blank1
+                                </p>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <a href="#" class="btn btn-primary">
-                            <img src="/Images/blanklogo.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                            <p>
-                                Fill in your timesheets every week!
-                            </p>
-                        </a>
+                    <div ng-show="Blank2">
+                        <div class="col-md-4">
+                            <a href="#" class="btn btn-primary">
+                                <img src="/Images/blanklogo.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>
+                                    Blank2
+                                </p>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <a href="#" class="btn btn-primary">
-                            <img src="/Images/blanklogo.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                            <p>
-                                Fill in your timesheets every week!
-                            </p>
-                        </a>
-                    </div>
-                </div>
 
+                </div>
             </div>
         </div>
-    </div>
 </body>
 </html>

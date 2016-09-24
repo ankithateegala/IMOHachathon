@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="AcronymsInfo.cs" />
     <Compile Include="BrowserJsonFormatter.cs" />
+    <Compile Include="HistoryLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,6 +9,10 @@ namespace WebApplication1.Util
         public string RdssqlServerConnection => ConfigurationManager.ConnectionStrings["RDSSQLServerConnection"].ConnectionString;
         public string SqlQueryPath => ConfigurationManager.AppSettings["SqlQueryPath"];
         public string GetAcronyms => ConfigurationManager.AppSettings["GetAcronyms"];
+        public string GetHistoryLogbyName => ConfigurationManager.AppSettings["GetHistoryLogbyName"];
+        public string GetHistoryList => ConfigurationManager.AppSettings["GetHistoryList"];
+        public string InsertHistoryLog => ConfigurationManager.AppSettings["InsertHistoryLog"];
+        public string UpdateHistoryLog => ConfigurationManager.AppSettings["UpdateHistoryLog"];
     }
 
 }

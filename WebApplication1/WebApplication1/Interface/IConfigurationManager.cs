@@ -5,5 +5,9 @@
         string RdssqlServerConnection { get; }
         string SqlQueryPath { get; }
         string GetAcronyms { get; }
-    }
+        string GetHistoryLogbyName { get; }
+        string GetHistoryList { get; }
+        string InsertHistoryLog { get; }
+        string UpdateHistoryLog { get; }
+    } 
 }

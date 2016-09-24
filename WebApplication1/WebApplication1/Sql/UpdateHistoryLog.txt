@@ -1,0 +1,3 @@
+UPDATE [dbo].[HistoryLog]
+   SET [AppearTimes] = @AppearTimes
+ WHERE ACRONYMName = @ACRONYMName

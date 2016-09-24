@@ -1,0 +1,6 @@
+INSERT INTO [dbo].[HistoryLog]
+           ([ACRONYMName]
+           ,[AppearTimes])
+     VALUES
+           (@ACRONYMName
+           ,@AppearTimes)

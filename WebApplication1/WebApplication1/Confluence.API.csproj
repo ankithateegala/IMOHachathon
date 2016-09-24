@@ -98,6 +98,10 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Sql\GetAcronyms.txt" />
+    <Content Include="Sql\GetHistoryList.txt" />
+    <Content Include="Sql\GetHistoryLogbyName.txt" />
+    <Content Include="Sql\InsertHistoryLog.txt" />
+    <Content Include="Sql\UpdateHistoryLog.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

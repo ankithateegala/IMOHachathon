@@ -28,5 +28,27 @@ namespace WebApplication1.Util
             var response = _dapper.Query<AcronymsInfo>(_configuration.RdssqlServerConnection, _fileReader.GetFile(_configuration.GetAcronyms));
             return response;
         }
+
+        public IEnumerable<HistoryLog> GetHistoryLogbyName(string name)
+        {
+            var response = _dapper.Query<HistoryLog>(_configuration.RdssqlServerConnection, _fileReader.GetFile(_configuration.GetHistoryLogbyName), new { ACRONYMName = name});
+            return response;
+        }
+
+        public IEnumerable<HistoryLog> GetHistoryLog()
+        {
+            var response = _dapper.Query<HistoryLog>(_configuration.RdssqlServerConnection, _fileReader.GetFile(_configuration.GetHistoryList));
+            return response;
+        }
+
+        public void InsertHistoryLog(HistoryLog log)
+        {
+             _dapper.Execute(_configuration.RdssqlServerConnection, _fileReader.GetFile(_configuration.InsertHistoryLog), new { ACRONYMName = log.AcronymName, AppearTimes =log.AppearTimes});
+        }
+
+        public void UpdateHistoryLog(HistoryLog log)
+        {
+            _dapper.Execute(_configuration.RdssqlServerConnection, _fileReader.GetFile(_configuration.UpdateHistoryLog), new { ACRONYMName = log.AcronymName, AppearTimes = log.AppearTimes + 1 });
+        }
     }
 }

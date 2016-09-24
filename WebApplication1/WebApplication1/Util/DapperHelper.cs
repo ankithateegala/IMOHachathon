@@ -28,5 +28,16 @@ namespace WebApplication1.Util
             return response;
         }
 
+        public void Execute(string connection, string sql, object parameter = null)
+        {
+            using (var sqlConnection = new SqlConnection(connection))
+            {
+                sqlConnection.Open();
+
+                sqlConnection.Query(sql, parameter);
+
+                sqlConnection.Close();
+            }
+        }
     }
 }

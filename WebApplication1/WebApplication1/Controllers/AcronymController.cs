@@ -1,16 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Threading.Tasks;
 using System.Web.Http;
-using Confluence.Model;
+using WebApplication1.Interface;
 
 namespace WebApplication1.Controllers
 {
     [RoutePrefix("api/Acronyms")]
     public class AcronymController : ApiController
     {
-        [Route("")]
-        public IEnumerable<AcronymsInfo> GetAcronyms()
+        private readonly IConfigurationManager _webConfig;
+        public AcronymController(): this (new ConfluenceFactory()) { }
+
+        private AcronymController(ConfluenceFactory confluenceFactory)
         {
-            
+            if (confluenceFactory == null)
+            {
+                throw new ArgumentNullException(nameof(confluenceFactory));
+            }
+            _webConfig = confluenceFactory.WebConfig;
+        }
+
+
+        [Route("")]
+        public async Task GetAcronyms()
+        {
+
         }
 
     }

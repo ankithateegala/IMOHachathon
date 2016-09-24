@@ -14,6 +14,7 @@ namespace WebApplication1.Util
         public string InsertHistoryLog => ConfigurationManager.AppSettings["InsertHistoryLog"];
         public string UpdateHistoryLog => ConfigurationManager.AppSettings["UpdateHistoryLog"];
         public string GetLinksById => ConfigurationManager.AppSettings["GetLinksById"];
+        public string GetRelatedById => ConfigurationManager.AppSettings["GetRelatedById"];
     }
 
 }

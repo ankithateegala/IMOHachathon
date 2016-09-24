@@ -35,6 +35,7 @@ namespace WebApplication1.Controllers
             foreach (var acronym in acronyms)
             {
                 acronym.Links = _databaseHelper.GetLinksById(acronym.ABSTRACT_CODE);
+                acronym.Related = _databaseHelper.GetRelatedById(acronym.ABSTRACT_CODE);
             }
             return acronyms;
         }

@@ -10,5 +10,6 @@
         string InsertHistoryLog { get; }
         string UpdateHistoryLog { get; }
         string GetLinksById { get; }
+        string GetRelatedById { get; }
     } 
 }

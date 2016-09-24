@@ -10,5 +10,6 @@ namespace Confluence.Model
         public string Full_Name { get; set; }
         public string Description { get; set; }
         public IEnumerable<string> Links { get; set; }
+        public IEnumerable<string> Related { get; set; }
     }
 }

@@ -56,5 +56,11 @@ namespace WebApplication1.Util
             var response = _dapper.Query<string>(_configuration.RdssqlServerConnection, _fileReader.GetFile(_configuration.GetLinksById), new { ABSTRACT_CODE = id });
             return response;
         }
+
+        public IEnumerable<string> GetRelatedById(int id)
+        {
+            var response = _dapper.Query<string>(_configuration.RdssqlServerConnection, _fileReader.GetFile(_configuration.GetRelatedById), new { ABSTRACT_CODE = id });
+            return response;
+        }
     }
 }

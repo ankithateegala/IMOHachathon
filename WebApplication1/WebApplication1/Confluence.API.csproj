@@ -101,6 +101,7 @@
     <Content Include="Sql\GetHistoryList.txt" />
     <Content Include="Sql\GetHistoryLogbyName.txt" />
     <Content Include="Sql\GetLinksById.txt" />
+    <Content Include="Sql\GetRelatedById.txt" />
     <Content Include="Sql\InsertHistoryLog.txt" />
     <Content Include="Sql\UpdateHistoryLog.txt" />
     <Content Include="Web.config" />

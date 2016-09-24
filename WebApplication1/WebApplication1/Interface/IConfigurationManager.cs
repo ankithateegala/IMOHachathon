@@ -2,9 +2,7 @@
 {
     public interface IConfigurationManager
     {
-        string ConfluenceUrl { get; }
-        string PageId { get; }
-        string ConfluenceTestUsername { get; }
-        string ConfluenceTestPassword { get; }
+        string RdssqlServerConnection { get; }
+        string SqlQueryPath { get; }
     }
 }

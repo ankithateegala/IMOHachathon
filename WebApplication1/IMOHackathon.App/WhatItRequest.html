@@ -51,18 +51,17 @@
         <br>
         <table id="searchTextResults" st-table="rowCollection" class="table table-striped" st-safe-src="rowCollection">
             <thead>
-                <tr>
-                    <th colspan='999'>
-                        <input st-search class='form-control' type='search' placeholder='Search' />
-                    </th>
-                </tr>
-            </thead>
-            <tr st-select-row="row" ng-repeat="row in rowCollection ">
-                <td>
-                    <h2>{{row.AcronymName}}</h2>
-                    <h2>{{row.AppearTimes}}</h2>
-                </td>
+            <tr>
+                <th>Acronym Name</th>
+                <th>Request Times</th>
             </tr>
+            </thead>
+            <tbody>
+                <tr st-select-row="row" ng-repeat="row in rowCollection ">
+                    <td>{{row.AcronymName}}</td>
+                    <td>{{row.AppearTimes}}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </body>

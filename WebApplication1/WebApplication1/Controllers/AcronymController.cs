@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Confluence.Model;
 using WebApplication1.Interface;
 using WebApplication1.Util;
@@ -9,6 +9,7 @@ using WebApplication1.Util;
 namespace WebApplication1.Controllers
 {
     [RoutePrefix("api/Acronyms")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class AcronymController : ApiController
     {
         private readonly IConfigurationManager _webConfig;

@@ -7,6 +7,7 @@ namespace WebApplication1
     {
         public static void Register(HttpConfiguration config)
         {
+            config.EnableCors();
             config.MapHttpAttributeRoutes();
 
             var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings;

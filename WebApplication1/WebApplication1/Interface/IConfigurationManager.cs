@@ -9,5 +9,6 @@
         string GetHistoryList { get; }
         string InsertHistoryLog { get; }
         string UpdateHistoryLog { get; }
+        string GetLinksById { get; }
     } 
 }

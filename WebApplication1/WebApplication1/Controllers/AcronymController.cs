@@ -31,7 +31,12 @@ namespace WebApplication1.Controllers
         [Route("")]
         public IEnumerable<AcronymsInfo> GetAcronyms()
         {
-           return _databaseHelper.GetAcronymsInfo();
+           var acronyms = _databaseHelper.GetAcronymsInfo();
+            foreach (var acronym in acronyms)
+            {
+                acronym.Links = _databaseHelper.GetLinksById(acronym.ABSTRACT_CODE);
+            }
+            return acronyms;
         }
 
     }

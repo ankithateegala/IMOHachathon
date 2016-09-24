@@ -13,6 +13,7 @@ namespace WebApplication1.Util
         public string GetHistoryList => ConfigurationManager.AppSettings["GetHistoryList"];
         public string InsertHistoryLog => ConfigurationManager.AppSettings["InsertHistoryLog"];
         public string UpdateHistoryLog => ConfigurationManager.AppSettings["UpdateHistoryLog"];
+        public string GetLinksById => ConfigurationManager.AppSettings["GetLinksById"];
     }
 
 }

@@ -50,5 +50,11 @@ namespace WebApplication1.Util
         {
             _dapper.Execute(_configuration.RdssqlServerConnection, _fileReader.GetFile(_configuration.UpdateHistoryLog), new { ACRONYMName = log.AcronymName, AppearTimes = log.AppearTimes + 1 });
         }
+
+        public IEnumerable<string> GetLinksById(int id)
+        {
+            var response = _dapper.Query<string>(_configuration.RdssqlServerConnection, _fileReader.GetFile(_configuration.GetLinksById), new { ABSTRACT_CODE = id });
+            return response;
+        }
     }
 }

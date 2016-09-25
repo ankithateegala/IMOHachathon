@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>What's IT</title>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="app/main.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js"></script>
+    <style>
+        .navbar-default {
+            background-color: #2e6da4;
+        }
+
+            .navbar-default .navbar-brand {
+                color: white;
+            }
+
+            .navbar-default .navbar-nav > li > a {
+                color: white;
+            }
+
+                    .stylish-panel {
+            padding: 20px 0;
+        }
+
+            .stylish-panel > div > div {
+                padding: 10px;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                transition: 0.2s;
+            }
+
+        #searchTextResults ul {
+              list-style: none;
+            }
+
+        #searchTextResults li {
+              display: inline;
+            }
+
+        span > a {
+            color: #f5f5f5;
+            text-decoration: none;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('#AskButton').hide();
+
+            $('#Searchbar')
+                .keyup(function(event) {
+                    if ($('#Searchbar').val() != '' &&
+                            $('#searchTextResults').children('tbody').children('tr').length === 1
+                    ) {
+                        $('#AskButton').show();
+                    } else {
+                        $('#AskButton').hide();
+                    }
+                });
+        });
+
+    </script>
+</head>
+<body>
+    <div ng-controller="whatsItController">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">IMO</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/"/>Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+            <table class="table table-striped" id="searchTextResults">
+                <tr>
+                    <th class="col-md-3">
+                    </th>
+                    <th class="col-md-8">
+                        Search: <input ng-model="searchText" id="Searchbar">
+                        <button type="button" id="AskButton" ng-click="PostLog()">Ask For this</button>
+                    </th>
+                    <th class="col-md-3">
+                    </th>
+                </tr>
+                <tr ng-repeat="row in rowCollection | filter:searchText">
+                    <td class="col-md-3"></td>
+                    <td class="col-md-8">
+                        <h2>{{row.Acronym}}</h2>
+                        <h2>{{row.Full_Name}}</h2>
+                        <p>{{row.Description}}</p>
+                        <ul>
+                            <li ng-if="row.Related.length != 0">Also See:</li>
+                            <li ng-repeat="Related in row.Related track by $index">
+                                <span class="badge"><a href="#" >{{Related}}</a></span>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="col-md-3">
+                        <h5 ng-if="row.Links.length != 0">Useful Links</h5>
+                        <h5 ng-repeat="link in row.Links track by $index">
+                            <a target="_blank" ng-href="{{link.LINK_ADDRESS}}">{{link.LINK_TYPE}}</a>
+                        </h5>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

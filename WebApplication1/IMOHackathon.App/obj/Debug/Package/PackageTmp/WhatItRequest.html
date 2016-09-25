@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>What's IT Request</title>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/main.js"></script>
+    <script src="path/to/angular.js"></script>
+    <script src="path/to/angular-route.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js"></script>
+    <style>
+        .navbar-default {
+            background-color: #2e6da4;
+        }
+
+            .navbar-default .navbar-brand {
+                color: white;
+            }
+
+            .navbar-default .navbar-nav > li > a {
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <div ng-controller="LogController">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">IMO</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <hr />
+        <br>
+        <table id="searchTextResults" st-table="rowCollection" class="table table-striped" st-safe-src="rowCollection">
+            <thead>
+            <tr>
+                <th>Acronym Name</th>
+                <th>Request Times</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr st-select-row="row" ng-repeat="row in rowCollection ">
+                    <td>{{row.AcronymName}}</td>
+                    <td>{{row.AppearTimes}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

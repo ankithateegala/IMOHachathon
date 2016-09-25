@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>IMO</title>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="app/main.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .stylish-panel {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+            .stylish-panel > div > div {
+                padding: 10px;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                transition: 0.2s;
+            }
+
+            .stylish-panel > div:hover > div {
+                margin-top: -10px;
+                border: 1px solid rgb(200, 200, 200);
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+                background: rgba(200, 200, 200, 0.1);
+                transition: 0.5s;
+            }
+
+            .stylish-panel > div:hover img {
+                border-radius: 50%;
+                /*-webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);*/
+            }
+
+        .btn-primary {
+            color: black;
+            background-color: transparent;
+            border-color: #2e6da4;
+        }
+
+        .navbar-default {
+            background-color: #2e6da4;
+        }
+
+            .navbar-default .navbar-brand {
+            color: white;
+        }
+
+            .navbar-default .navbar-nav > li > a {
+            color: white;
+        }
+
+        .animate-show {
+          line-height: 20px;
+          opacity: 1;
+          padding: 10px;
+          border: 1px solid black;
+          background: white;
+        }
+
+        .animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+          transition: all linear 0.5s;
+        }
+
+        .animate-show.ng-hide {
+          line-height: 0;
+          opacity: 0;
+          padding: 0 10px;
+        }
+
+        .check-element {
+          padding: 10px;
+          border: 1px solid black;
+          background: white;
+        }
+    </style>
+
+</head>
+<body ng-app="app" ng-controller="MainController">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">IMO</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><button ng-click="myFunc()" style="background-color:transparent;border-color:transparent;color:white"><span class="glyphicon glyphicon-pencil"></span></button></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class=" container">
+        <div class="page-header">
+        </div>
+        
+        <div ng-show="showMe">
+            What's IT: <input type="checkbox" ng-model="whatsit" aria-label="Toggle ngHide"><br />
+            KT Toolbox: <input type="checkbox" ng-model="kttoolbox" aria-label="Toggle ngHide"><br />
+            Time Consultant: <input type="checkbox" ng-model="TimeConsultant" aria-label="Toggle ngHide"><br />
+            American Funds: <input type="checkbox" ng-model="amfunds" aria-label="Toggle ngHide"><br />
+            Trinet: <input type="checkbox" ng-model="Trinet" aria-label="Toggle ngHide"><br />
+            Cornerstone: <input type="checkbox" ng-model="Cornerstone" aria-label="Toggle ngHide"><br />
+            
+        </div>
+            <div class="container">
+                <div class="row stylish-panel">
+                    <div ng-show="whatsit">
+                        <div class="col-md-4">
+                            <a href="/whatsit.html" class="btn btn-primary">
+                                <img src="/Images/What'sIT.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>Learn @ IMO</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div ng-show="kttoolbox">
+                        <div class="col-md-4">
+                            <a href="/kttoolbox.html" class="btn btn-primary">
+                                <img src="/Images/toolbox.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>
+                                    KT Toolbox
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div ng-show="TimeConsultant">
+                        <div class="col-md-4">
+
+                            <a href="#" class="btn btn-primary">
+                                <img src="/Images/timeconsultant.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>Do timesheets every week!</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div ng-show="amfunds">
+                        <div class="col-md-4">
+                            <a href="https://americanfunds.retirementpartner.com" target="_blank"  class="btn btn-primary">
+                                <img src="/Images/amfunds.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>
+                                    Manage your investments
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div ng-show="Trinet">
+                        <div class="col-md-4">
+                            <a href="https://www.hrpassport.com/" target="_blank"  class="btn btn-primary">
+                                <img src="/Images/Trinet.jpg" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>Manage your profile</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div ng-show="Cornerstone">
+                        <div class="col-md-4">
+                            <a href="https://imo.csod.com/" target="_blank" class="btn btn-primary">
+                                <img src="/Images/cornerstone.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>Develop yourself</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+</html>

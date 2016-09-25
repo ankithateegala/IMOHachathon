@@ -4,10 +4,8 @@
     <title>What's IT</title>
     <meta charset="utf-8" />
     <script src="Scripts/angular.min.js"></script>
-    <script src="app/app.module.js"></script>
     <script src="app/main.js"></script>
-    <script src="path/to/angular.js"></script>
-    <script src="path/to/angular-route.js"></script>
+    <script src="Scripts/angular.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -25,7 +23,8 @@
             .navbar-default .navbar-nav > li > a {
                 color: white;
             }
-                    .stylish-panel {
+
+        .stylish-panel {
             padding: 20px 0;
         }
 
@@ -35,14 +34,29 @@
                 border-radius: 4px;
                 transition: 0.2s;
             }
-            #searchTextResults ul{
-              list-style: none;
-            }
 
-            #searchTextResults li{
-              display: inline;
-            }
+        #searchTextResults ul {
+            list-style: none;
+        }
+
+        #searchTextResults li {
+            display: inline;
+        }
+
+        span > a {
+            color: #f5f5f5;
+            text-decoration: none;
+        }
     </style>
+    <script type="text/javascript">
+        $(function () {
+            $('a[class="ng-binding"]').click(function () {
+                alert('Sign new href executed.');
+                //$('#Searchbar').val($(this).val());
+            });
+        });
+
+    </script>
 </head>
 <body>
     <div ng-controller="whatsItController">
@@ -70,10 +84,10 @@
         <div>
             <table class="table table-striped" id="searchTextResults">
                 <tr>
-                    <th  class="col-md-3">
+                    <th class="col-md-3">
                     </th>
                     <th class="col-md-8">
-                        Search: <input ng-model="searchText">
+                        Search: <input ng-model="searchText" id="Searchbar">
                     </th>
                     <th class="col-md-3">
                     </th>
@@ -87,12 +101,12 @@
                         <h4 ng-if="row.Related.length != 0">Also See:</h4>
                         <ul>
                             <li ng-repeat="Related in row.Related track by $index">
-                                <span class="badge">{{Related}}</span>
+                                <span class="badge"><a href="#" >{{Related}}</a></span>
                             </li>
                         </ul>
                     </td>
                     <td class="col-md-3">
-                        <h5 ng-if ="row.Links.length != 0">Useful Links</h5>
+                        <h5 ng-if="row.Links.length != 0">Useful Links</h5>
                         <h5 ng-repeat="link in row.Links track by $index">
                             <a ng-href="{{link}}">link1</a>
                         </h5>

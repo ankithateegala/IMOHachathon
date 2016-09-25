@@ -4,10 +4,8 @@
     <title>IMO</title>
     <meta charset="utf-8" />
     <script src="Scripts/angular.min.js"></script>
-    <script src="app/app.module.js"></script>
     <script src="app/main.js"></script>
-    <script src="path/to/angular.js"></script>
-    <script src="path/to/angular-route.js"></script>
+    <script src="Scripts/angular.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -102,7 +100,7 @@
                     <li class="active"><a href="http://localhost:50855/">Home</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></li>
+                    <li><button ng-click="myFunc()" style="background-color:transparent;border-color:transparent;color:white"><span class="glyphicon glyphicon-pencil"></span></button></li>
                     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
@@ -111,10 +109,9 @@
     
     <div class=" container">
         <div class="page-header">
-            
         </div>
         
-        <div style="float: right">
+        <div ng-show="showMe">
             What's IT: <input type="checkbox" ng-model="whatsit" aria-label="Toggle ngHide"><br />
             Time Consultant: <input type="checkbox" ng-model="TimeConsultant" aria-label="Toggle ngHide"><br />
             Trinet: <input type="checkbox" ng-model="Trinet" aria-label="Toggle ngHide"><br />

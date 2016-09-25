@@ -50,9 +50,22 @@
     </style>
     <script type="text/javascript">
         $(function () {
-            $('a[class="ng-binding"]').click(function () {
-                alert('Sign new href executed.');
-                //$('#Searchbar').val($(this).val());
+            $('#AskButton').hide();
+
+            $('#Searchbar')
+                .keyup(function(event) {
+                    if ($('#Searchbar').val() != '' &&
+                            $('#searchTextResults').children('tbody').children('tr').length === 1
+                    ) {
+                        $('#AskButton').show();
+                    } else {
+                        $('#AskButton').hide();
+                    }
+                });
+
+            $("#AskButton").click(function () {
+                var text = $('#Searchbar').val();
+                var log = { AcronymName: text}
             });
         });
 
@@ -88,6 +101,7 @@
                     </th>
                     <th class="col-md-8">
                         Search: <input ng-model="searchText" id="Searchbar">
+                        <button type="button" id="AskButton">Ask For this</button>
                     </th>
                     <th class="col-md-3">
                     </th>

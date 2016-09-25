@@ -27,16 +27,17 @@ namespace WebApplication1.Controllers
         }
 
         [Route("")]
-        public void PostHistoryLog(HistoryLog log)
+        public void PostHistoryLog(string AcronymName)
         {
-            var CurrentLog = _databaseHelper.GetHistoryLogbyName(log.AcronymName);
-            if (!CurrentLog.Any())
+            var currentLog = _databaseHelper.GetHistoryLogbyName(AcronymName);
+            var historyLogs  = currentLog as HistoryLog[] ?? currentLog.ToArray();
+            if (!historyLogs.Any())
             {
-                _databaseHelper.InsertHistoryLog(log);
+                _databaseHelper.InsertHistoryLog(historyLogs.First());
             }
             else
             {
-                _databaseHelper.UpdateHistoryLog(log);
+                _databaseHelper.UpdateHistoryLog(historyLogs.First());
             }
         }
 

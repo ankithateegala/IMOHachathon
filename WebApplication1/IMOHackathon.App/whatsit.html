@@ -35,6 +35,13 @@
                 border-radius: 4px;
                 transition: 0.2s;
             }
+            #searchTextResults ul{
+              list-style: none;
+            }
+
+            #searchTextResults li{
+              display: inline;
+            }
     </style>
 </head>
 <body>
@@ -77,10 +84,12 @@
                         <h2>{{row.Acronym}}</h2>
                         <h2>{{row.Full_Name}}</h2>
                         <p>{{row.Description}}</p>
-                        <h4 ng-if ="row.Related.length != 0">Also See:</h4>
-                        <h5 ng-repeat="Related in row.Related track by $index">
-                            <p>{{Related}}</p>
-                        </h5>
+                        <h4 ng-if="row.Related.length != 0">Also See:</h4>
+                        <ul>
+                            <li ng-repeat="Related in row.Related track by $index">
+                                <span class="badge">{{Related}}</span>
+                            </li>
+                        </ul>
                     </td>
                     <td class="col-md-3">
                         <h5 ng-if ="row.Links.length != 0">Useful Links</h5>

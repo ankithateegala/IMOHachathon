@@ -69,7 +69,9 @@
     <Content Include="Images\blanklogo.png" />
     <Content Include="Images\cornerstone.png" />
     <Content Include="Images\timeconsultant.png" />
+    <Content Include="Images\toolbox.png" />
     <Content Include="Images\Trinet.jpg" />
+    <Content Include="kttoolbox.html" />
     <Content Include="WhatItRequest.html" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>

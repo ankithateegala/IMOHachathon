@@ -97,7 +97,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="http://localhost:50855/">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><button ng-click="myFunc()" style="background-color:transparent;border-color:transparent;color:white"><span class="glyphicon glyphicon-pencil"></span></button></li>
@@ -113,11 +113,12 @@
         
         <div ng-show="showMe">
             What's IT: <input type="checkbox" ng-model="whatsit" aria-label="Toggle ngHide"><br />
+            KT Toolbox: <input type="checkbox" ng-model="kttoolbox" aria-label="Toggle ngHide"><br />
             Time Consultant: <input type="checkbox" ng-model="TimeConsultant" aria-label="Toggle ngHide"><br />
+            American Funds: <input type="checkbox" ng-model="amfunds" aria-label="Toggle ngHide"><br />
             Trinet: <input type="checkbox" ng-model="Trinet" aria-label="Toggle ngHide"><br />
             Cornerstone: <input type="checkbox" ng-model="Cornerstone" aria-label="Toggle ngHide"><br />
-            Blank1: <input type="checkbox" ng-model="Blank1" aria-label="Toggle ngHide"><br />
-            Blank2: <input type="checkbox" ng-model="Blank2" aria-label="Toggle ngHide"><br />
+            
         </div>
             <div class="container">
                 <div class="row stylish-panel">
@@ -125,7 +126,17 @@
                         <div class="col-md-4">
                             <a href="/whatsit.html" class="btn btn-primary">
                                 <img src="/Images/What'sIT.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                                <p>Acronymn finder</p>
+                                <p>Learn @ IMO</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div ng-show="kttoolbox">
+                        <div class="col-md-4">
+                            <a href="/kttoolbox.html" class="btn btn-primary">
+                                <img src="/Images/toolbox.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>
+                                    KT Toolbox
+                                </p>
                             </a>
                         </div>
                     </div>
@@ -138,9 +149,19 @@
                             </a>
                         </div>
                     </div>
+                    <div ng-show="amfunds">
+                        <div class="col-md-4">
+                            <a href="https://americanfunds.retirementpartner.com" target="_blank"  class="btn btn-primary">
+                                <img src="/Images/amfunds.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                <p>
+                                    Manage your investments
+                                </p>
+                            </a>
+                        </div>
+                    </div>
                     <div ng-show="Trinet">
                         <div class="col-md-4">
-                            <a href="#" class="btn btn-primary">
+                            <a href="https://www.hrpassport.com/" target="_blank"  class="btn btn-primary">
                                 <img src="/Images/Trinet.jpg" alt="Texto Alternativo" class="img-circle img-thumbnail">
                                 <p>Manage your profile</p>
                             </a>
@@ -148,32 +169,13 @@
                     </div>
                     <div ng-show="Cornerstone">
                         <div class="col-md-4">
-                            <a href="#" class="btn btn-primary">
+                            <a href="https://imo.csod.com/" target="_blank" class="btn btn-primary">
                                 <img src="/Images/cornerstone.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                                <p>Know your potential</p>
+                                <p>Develop yourself</p>
                             </a>
                         </div>
                     </div>
-                    <div ng-show="Blank1">
-                        <div class="col-md-4">
-                            <a href="#" class="btn btn-primary">
-                                <img src="/Images/blanklogo.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                                <p>
-                                    Blank1
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div ng-show="Blank2">
-                        <div class="col-md-4">
-                            <a href="#" class="btn btn-primary">
-                                <img src="/Images/blanklogo.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                                <p>
-                                    Blank2
-                                </p>
-                            </a>
-                        </div>
-                    </div>
+
 
                 </div>
             </div>

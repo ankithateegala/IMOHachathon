@@ -6,19 +6,19 @@
         $scope.showMe = false;
         $scope.myFunc = function () {
             $scope.showMe = !$scope.showMe;
-        }
+    }
     }]);
 
     myApp.factory('whatsItFactory',
     ['$http', function ($http) {
         return{
-                get: function (url) {
+            get: function (url) {
                 return $http.get(url);
                 },
             post: function(url,data) {
                 return $http.post(url,data);
             }
-    };
+        };
     }])
 
     myApp.controller('whatsItController', ['$scope', 'whatsItFactory', function ($scope, whatsItFactory) {

@@ -62,11 +62,6 @@
                         $('#AskButton').hide();
                     }
                 });
-
-            $("#AskButton").click(function () {
-                var text = $('#Searchbar').val();
-                var log = { AcronymName: text}
-            });
         });
 
     </script>
@@ -101,7 +96,7 @@
                     </th>
                     <th class="col-md-8">
                         Search: <input ng-model="searchText" id="Searchbar">
-                        <button type="button" id="AskButton">Ask For this</button>
+                        <button type="button" id="AskButton" ng-click="PostLog()">Ask For this</button>
                     </th>
                     <th class="col-md-3">
                     </th>

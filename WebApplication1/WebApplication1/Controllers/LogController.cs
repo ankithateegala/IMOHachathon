@@ -30,14 +30,14 @@ namespace WebApplication1.Controllers
         public void PostHistoryLog(string AcronymName)
         {
             var currentLog = _databaseHelper.GetHistoryLogbyName(AcronymName);
-            var historyLogs  = currentLog as HistoryLog[] ?? currentLog.ToArray();
-            if (!historyLogs.Any())
+
+            if (!currentLog.Any())
             {
-                _databaseHelper.InsertHistoryLog(historyLogs.First());
+                _databaseHelper.InsertHistoryLog(new HistoryLog {AcronymName = AcronymName, AppearTimes = 1});
             }
             else
             {
-                _databaseHelper.UpdateHistoryLog(historyLogs.First());
+                _databaseHelper.UpdateHistoryLog(currentLog.First());
             }
         }
 

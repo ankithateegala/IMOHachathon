@@ -9,7 +9,7 @@
         string GetHistoryList { get; }
         string InsertHistoryLog { get; }
         string UpdateHistoryLog { get; }
-        string GetLinksById { get; }
+        string GetLinkbyId { get; }
         string GetRelatedById { get; }
     } 
 }

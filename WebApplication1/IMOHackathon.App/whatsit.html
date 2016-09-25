@@ -98,8 +98,8 @@
                         <h2>{{row.Acronym}}</h2>
                         <h2>{{row.Full_Name}}</h2>
                         <p>{{row.Description}}</p>
-                        <h4 ng-if="row.Related.length != 0">Also See:</h4>
                         <ul>
+                            <li ng-if="row.Related.length != 0">Also See:</li>
                             <li ng-repeat="Related in row.Related track by $index">
                                 <span class="badge"><a href="#" >{{Related}}</a></span>
                             </li>

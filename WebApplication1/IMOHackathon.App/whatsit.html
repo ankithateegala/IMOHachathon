@@ -117,7 +117,7 @@
                     <td class="col-md-3">
                         <h5 ng-if="row.Links.length != 0">Useful Links</h5>
                         <h5 ng-repeat="link in row.Links track by $index">
-                            <a ng-href="{{link}}">link1</a>
+                            <a target="_blank" ng-href="{{link.LINK_ADDRESS}}">{{link.LINK_TYPE}}</a>
                         </h5>
                     </td>
                 </tr>

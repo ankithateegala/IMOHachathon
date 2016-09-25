@@ -77,9 +77,16 @@
                         <h2>{{row.Acronym}}</h2>
                         <h2>{{row.Full_Name}}</h2>
                         <p>{{row.Description}}</p>
+                        <h4 ng-if ="row.Related.length != 0">Also See:</h4>
+                        <h5 ng-repeat="Related in row.Related track by $index">
+                            <p>{{Related}}</p>
+                        </h5>
                     </td>
                     <td class="col-md-3">
-                        <h5>Useful Links</h5>
+                        <h5 ng-if ="row.Links.length != 0">Useful Links</h5>
+                        <h5 ng-repeat="link in row.Links track by $index">
+                            <a ng-href="{{link}}">link1</a>
+                        </h5>
                     </td>
                 </tr>
             </table>
